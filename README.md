@@ -6,6 +6,5 @@ When you open note taker you are presented with a landing page with a link to a 
 
 ## Link to deployed application
 ******************************************************************************************************************************************************************************************************************************
-[Note Taker live link] (https://richardflores009.github.io/note-taker/)
 
 [Note Taker Heroku link] (https://still-fortress-82582.herokuapp.com/)
