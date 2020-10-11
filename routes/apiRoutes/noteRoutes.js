@@ -36,6 +36,7 @@ router.delete('/notes/:id', (req, res) => {
         // const deleteNote = notes.filter(note => note.id !== req.params.id)
         const deleteNote = req.params.id
         deleteDuhNote(deleteNote, notes);
+        res.json(deleteNote)
     } else {
         res.status(404).json(`no Member with the id of ${req.params.id} was found`)
     }
