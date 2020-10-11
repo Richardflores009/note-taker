@@ -20,7 +20,10 @@ var saveNote = function(note) {
   return $.ajax({
     url: "/api/notes",
     data: note,
-    method: "POST"
+    method: "POST",
+    // success: function(data) {
+    //   console.log(data)
+    // }
   });
 };
 
@@ -57,6 +60,7 @@ var handleNoteSave = function() {
   };
 
   saveNote(newNote).then(function(data) {
+    // createNewNote(response)
     getAndRenderNotes();
     renderActiveNote();
   });

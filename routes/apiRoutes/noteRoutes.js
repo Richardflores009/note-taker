@@ -28,6 +28,17 @@ router.post('/notes', (req, res) => {
     // newNote(newEntry)
 
     res.json(newEntry)
-})
+});
+
+router.delete('/notes/:id', (req, res) => {
+    const found = notes.some(note => note.id === req.params.id);
+    console.log(notes)
+    if(found) {
+        const deleteNote = notes.filter(note => note.id !== req.params.id)
+        res.json(deleteNote);
+    } else {
+        res.status(404).json(`no Member with the id of ${req.params.id} was found`)
+    }
+});
 
 module.exports = router;
